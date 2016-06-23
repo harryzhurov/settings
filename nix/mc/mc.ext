@@ -553,18 +553,18 @@ shell/.sdw
 
 # StarOffice 6 and OpenOffice.org formats
 
-regex/\.(odt|ott|sxw|stw|ods|ots|sxc|stc|odp|otp|sxi|sti|odg|otg|sxd|std|odb|odf|sxm|odm|sxg)$
+regex/\.(odt|ott|sxw|stw|ods|ots|sxc|stc|odp|otp|sxi|sti|odg|otg|sxd|std|odb|odf|sxm|odm|sxg|doc|docx|xls|xlsx)$
 	Open=(libreoffice %f >/dev/null 2>&1 &)
 	View=%view{ascii} odt2txt %f
 
 
 # AbiWord
-shell/.abw
-	Open=/usr/local/libexec/mc/ext.d/doc.sh open abw
+#shell/.abw
+#	Open=/usr/local/libexec/mc/ext.d/doc.sh open abw
 
 # Gnumeric
-shell/i/.gnumeric
-	Open=/usr/local/libexec/mc/ext.d/doc.sh open gnumeric
+#shell/i/.gnumeric
+#	Open=/usr/local/libexec/mc/ext.d/doc.sh open gnumeric
 
 # Microsoft Word Document
 regex/i/\.(do[ct]|wri)$
