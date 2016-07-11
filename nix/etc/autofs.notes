@@ -1,13 +1,11 @@
 
-0. sudo apt-get install autofs
+0. sudo apt-get install autofs smbclient cifs-utils
 
 1. Add in /etc/auto.master the following line:
 
 /mnt/smb /etc/auto.smb
 
-2. Modify /etc/auto.smb:
-
-apply patch 'auto.smb.patch' to /etc/auto.smb
+2. Replace /etc/auto.smb with file in this repo (use symbolic link)
 
 This allows full access for anonymous guests
 
