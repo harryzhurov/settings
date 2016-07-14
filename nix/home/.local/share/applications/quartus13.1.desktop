@@ -2,8 +2,8 @@
 Version=1.0
 Type=Application
 Name=Quartus II 13.1
-Icon=/pool/cad/altera/13.1/quartus/adm/quartusii.png
-Exec=/pool/cad/altera/13.1/quartus/bin/quartus --64bit
+Icon=/opt/cad/altera/13.1/quartus/adm/quartusii.png
+Exec=/opt/cad/altera/13.1/quartus/bin/quartus --64bit
 NoDisplay=false
 Categories=Development;X-XFCE;X-Xfce-Toplevel;
 StartupNotify=false
