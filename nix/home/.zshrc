@@ -106,8 +106,8 @@ export MAIL=/var/spool/mail/$USERNAME
 export LESS=-cex3M
 export HELPDIR=/usr/share/zsh/$ZSH_VERSION/help  # directory for run-help function to find docs
 
-BFIN_ELF_MAN='/pool/cad/adi/bfin-elf/man:/pool/cad/adi/bfin-elf/share/man'
-GCC_ARM_MAN='/pool/cad/gcc/arm/share/doc/gcc-arm-none-eabi/man'
+BFIN_ELF_MAN="$CAD/adi/bfin-elf/man:$CAD/adi/bfin-elf/share/man"
+GCC_ARM_MAN="/$CAD/gcc/arm/share/doc/gcc-arm-none-eabi/man"
 
 export MANPATH="$MANPATH:/usr/share/man:$BFIN_ELF_MAN:$GCC_ARM_MAN"
 
