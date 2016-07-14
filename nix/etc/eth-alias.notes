@@ -1,0 +1,3 @@
+1. sudo cp eth-alias.sh /etc
+2. sudo cp eth-alias.service /etc/systemd/system
+3. sudo systemctl enable eth-alias.service

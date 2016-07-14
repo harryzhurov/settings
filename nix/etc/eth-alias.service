@@ -1,0 +1,10 @@
+[Unit]
+Description=eth interface alias Unit
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/etc/eth-alias.sh
+
+[Install]
+WantedBy=multi-user.target 
