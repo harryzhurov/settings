@@ -6,7 +6,7 @@ SRC_DIR=${PWD}/sources
 BUILD_DIR=${PWD}/build
 
 CONFIGURE_OPTIONS=
-CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS --prefix=/pool/cad/openocd"
+CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS --prefix=/opt/cad/openocd"
 #CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS --enable-maintainer-mode"
 CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS --disable-doxygen-html"
 CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS --enable-ftdi=no"
