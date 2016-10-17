@@ -112,7 +112,8 @@ GCC_ARM_MAN="/$CAD/gcc/arm/share/doc/gcc-arm-none-eabi/man"
 export MANPATH="$MANPATH:/usr/share/man:$BFIN_ELF_MAN:$GCC_ARM_MAN"
 
 export GREP_COLORS="mt=33"
-export GREP_OPTIONS='--color=auto'
+#export GREP_OPTIONS='--color=auto'
+
 
 MAILCHECK=300
 HISTSIZE=200
