@@ -538,7 +538,8 @@ type/^PDF
 
 # html
 regex/i/\.html?$
-	Open=/usr/local/libexec/mc/ext.d/web.sh open html
+	#Open=/usr/local/libexec/mc/ext.d/web.sh open html
+    Open=/opt/vivaldi/vivaldi %f
 	View=%view{ascii} /usr/local/libexec/mc/ext.d/web.sh view html
 
 # StarOffice 5.2
