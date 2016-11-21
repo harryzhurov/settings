@@ -53,7 +53,8 @@ done
 
 creds=/etc/creds/$key
 if [ -f "$creds" ]; then
-    opts=" $opts"',uid=$UID,gid=$GID,credentials='"$creds"
+    #opts=" $opts"',uid=$UID,gid=$GID,credentials='"$creds"
+    opts=" $opts"',uid=hz,gid=hz,credentials='"$creds"
     smbopts="-A $creds"
 else
     get_krb5_cache
@@ -63,7 +64,8 @@ else
         export KRB5CCNAME=$cache
     else
         #opts=" $opts"',guest,uid=$UID,gid=$GID'
-        opts=" $opts"',user=,pass=,uid=$UID,gid=$GID'
+        #opts=" $opts"',user=,pass=,uid=$UID,gid=$GID'
+        opts=" $opts"',user=,pass=,uid=hz,gid=hz'
         smbopts="-N"
     fi
 fi
