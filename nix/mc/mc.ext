@@ -378,7 +378,7 @@ type/^GIF
 	Include=image
 
 type/^JPEG
-	View=%view{ascii} /usr/local/libexec/mc/ext.d/image.sh view jpeg
+#	View=%view{ascii} /usr/local/libexec/mc/ext.d/image.sh view jpeg
 	Include=image
 
 type/^PC\ bitmap
@@ -427,7 +427,9 @@ shell/i/.svg
 
 include/image
 	Open=/usr/local/libexec/mc/ext.d/image.sh open ALL_FORMATS
-	View=%view{ascii} /usr/local/libexec/mc/ext.d/image.sh view ALL_FORMATS
+    #Open=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
+#	View=%view{ascii} /usr/local/libexec/mc/ext.d/image.sh view ALL_FORMATS
+    View=(feh -d --draw-tinted -F --start-at ./%p . >/dev/null 2>&1 &)
 
 
 ### Sound files ###
