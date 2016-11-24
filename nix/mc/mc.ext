@@ -761,6 +761,14 @@ shell/i/.vpw
     Open=(vs.sh %f &)
 
 
+### KiCad ###
+shell/i/.sch
+    Open=(%var{KICAD:/opt/cad/kicad/kicad-base}/bin/eeschema %f &)
+
+shell/i/.kicad_pcb
+    Open=(%var{KICAD:/opt/cad/kicad/kicad-base}/bin/pcbnew %f &)
+
+
 ### Default ###
 
 # Default target for anything not described above

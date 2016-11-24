@@ -70,6 +70,8 @@ alias -s pdf='~/bin/background qpdfview --unique'
 autoload -U pick-web-browser
 alias -s {html,htm}='~/bin/background vivaldi-beta >/dev/null'
 alias -s vpw='~/bin/background vs.sh'
+alias -s sch='~/bin/background $KICAD/bin/eeschema'
+alias -s kicad_pcb='~/bin/background $KICAD/bin/pcbnew'
 
 #manpath=($X11HOME/man /usr/man /usr/lang/man /usr/local/man)
 #export MANPATH
