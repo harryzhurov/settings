@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Quartus II 16.1
+Icon=/opt/cad/altera/16.1/quartus/adm/quartusii.png
+Exec=/opt/cad/altera/16.1/quartus/bin/quartus --64bit
+NoDisplay=false
+Categories=Development;X-XFCE;X-Xfce-Toplevel;
+StartupNotify=false
+Terminal=false
