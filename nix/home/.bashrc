@@ -160,3 +160,5 @@ source ~/etc/bash-git-prompt/gitprompt.sh
 
 
 
+
+export QSYS_ROOTDIR="/opt/cad/altera/16.1/quartus/sopc_builder/bin"
