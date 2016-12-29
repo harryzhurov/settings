@@ -763,10 +763,10 @@ shell/i/.vpw
 
 ### KiCad ###
 shell/i/.sch
-    Open=(%var{KICAD:/opt/cad/kicad/kicad-base}/bin/eeschema %f &)
+    Open=(%var{PATH:/opt/cad/kicad/kicad}/bin/eeschema %f &)
 
 shell/i/.kicad_pcb
-    Open=(%var{KICAD:/opt/cad/kicad/kicad-base}/bin/pcbnew %f &)
+    Open=(%var{KICAD:/opt/cad/kicad/kicad}/bin/pcbnew %f &)
 
 
 ### Default ###

@@ -22,3 +22,9 @@ toggle_fullscreen    f
 toggle_exif          e
 zoom_default         1
 zoom_fit             0
+scroll_left          Left
+scroll_right         Right
+scroll_up            Up
+scroll_down          Down
+prev_img             BackSpace page-up
+next_img             space page-down
