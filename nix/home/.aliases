@@ -78,5 +78,7 @@ se() {
 
 
 ai() {
-    sudo apt-get install $@
+    sudo apt install $@
 }
+
+envof() { sed 's/\x0/\n/g' /proc/${1}/environ; }
