@@ -1,0 +1,126 @@
+context default
+    keyword whole auto white
+    keyword whole break white
+    keyword whole case white
+    keyword whole char white
+    keyword whole const white
+    keyword whole continue white
+    keyword whole default white
+    keyword whole do white
+    keyword whole double white
+    keyword whole else white
+    keyword whole enum white
+    keyword whole extern white
+    keyword whole float white
+    keyword whole for white
+    keyword whole goto white
+    keyword whole if white
+    keyword whole int white
+    keyword whole long white
+    keyword whole register white
+    keyword whole return white
+    keyword whole short white
+    keyword whole signed white
+    keyword whole sizeof white
+    keyword whole static white
+    keyword whole struct white
+    keyword whole switch white
+    keyword whole typedef white
+    keyword whole union white
+    keyword whole unsigned white
+    keyword whole void white
+    keyword whole volatile white
+    keyword whole while white
+    keyword whole asm white
+    keyword whole catch white
+    keyword whole class white
+    keyword whole friend white
+    keyword whole delete white
+    keyword whole inline white
+    keyword whole new white
+    keyword whole operator white
+    keyword whole private white
+    keyword whole protected white
+    keyword whole public white
+    keyword whole this white
+    keyword whole throw white
+    keyword whole template white
+    keyword whole try white
+    keyword whole virtual white
+    keyword whole bool white
+    keyword whole const_cast white
+    keyword whole dynamic_cast white
+    keyword whole explicit white
+    keyword whole false white
+    keyword whole mutable white
+    keyword whole namespace white
+    keyword whole reinterpret_cast white
+    keyword whole static_cast white
+    keyword whole true white
+    keyword whole typeid white
+    keyword whole typename white
+    keyword whole using white
+    keyword whole wchar_t white
+    keyword whole ... white
+    keyword whole linestart \{\s\t\}\[\s\t\]#*\n brightmagenta
+
+    keyword /\* brown
+    keyword \*/ brown
+    keyword // brown
+
+    keyword '\\\{"abtnvfr\}' brightgreen
+    keyword '\\\{0123\}\{01234567\}\{01234567\}' brightgreen
+    keyword '\\'' brightgreen
+    keyword '\\\\' brightgreen
+    keyword '\\0' brightgreen
+    keyword '\{\s!"#$%&()\*\+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ\}' brightgreen
+
+    keyword > white
+    keyword < white
+    keyword \+ white
+    keyword - white
+    keyword \* white
+    keyword / white
+    keyword % white
+    keyword = white
+    keyword != white
+    keyword == white
+    keyword { brightcyan
+    keyword } brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+    keyword , brightcyan
+    keyword : brightcyan
+    keyword ? brightcyan
+    keyword ; brightmagenta
+
+context exclusive /\* \*/ brown
+    spellcheck
+
+context exclusive // \n brown
+    spellcheck
+
+context linestart # \n brightred
+    keyword \\\n white
+    keyword /\**\*/ brown
+    keyword //*\n brown
+    keyword "+" red
+    keyword <+> red
+
+context " " green
+    spellcheck
+    keyword \\" brightgreen
+    keyword %% brightgreen
+    keyword %\[#0\s-\+,\]\[0123456789\*\]\[.\]\[0123456789\*\]\[L\]\{eEfgGoxX\} brightgreen
+    keyword %\[0\s-\+,\]\[0123456789\*\]\[.\]\[0123456789\*\]\[hl\]\{diuxX\} brightgreen
+    keyword %\[hl\]n brightgreen
+    keyword %\[-\]\[0123456789\*\]\[.\]\[0123456789\*\]s brightgreen
+    keyword %[*] brightgreen
+    keyword %c brightgreen
+    keyword %p brightgreen
+    keyword \\\{0123\}\{01234567\}\{01234567\} brightgreen
+    keyword \\\\ brightgreen
+    keyword \\' brightgreen
+    keyword \\\{abtnvfr\} brightgreen
