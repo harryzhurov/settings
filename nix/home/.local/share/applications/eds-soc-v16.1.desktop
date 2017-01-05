@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=EDS SoC v16.1 (DS-5 v5.25)
+Icon=/opt/cad/altera/16.1/ds-5/sw/eclipse/icon.xpm
+Exec=env QUARTUS_ROOTDIR=/opt/cad/altera/16.1/quartus /opt/cad/altera/16.1/ds-5/bin/eclipse
+NoDisplay=false
+Categories=Development;X-XFCE;X-Xfce-Toplevel;
+StartupNotify=false
+Terminal=false
