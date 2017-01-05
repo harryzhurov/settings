@@ -62,6 +62,18 @@ context default
     keyword whole using white
     keyword whole wchar_t white
     keyword whole ... white
+    keyword whole uint32_t white
+    keyword whole int32_t white
+    keyword whole uint16_t white
+    keyword whole int16_t white
+    keyword whole uint8_t white
+    keyword whole int8_t white
+    keyword whole uint_fast8_t white
+    keyword whole int_fast8_t white
+    keyword whole uint_fast16_t white
+    keyword whole int_fast16_t white
+    keyword whole uint_fast32_t white
+    keyword whole int_fast32_t white
     keyword whole linestart \{\s\t\}\[\s\t\]#*\n brightmagenta
 
     keyword /\* brown
