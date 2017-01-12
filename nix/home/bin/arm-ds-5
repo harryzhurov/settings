@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source $HOME/.env
+/opt/cad/altera/16.1/ds-5/bin/eclipse &
