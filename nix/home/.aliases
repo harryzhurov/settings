@@ -82,3 +82,14 @@ ai() {
 }
 
 envof() { sed 's/\x0/\n/g' /proc/${1}/environ; }
+
+#--------------------------------------------------------------
+#
+#   CAD  
+#
+alias vivado="$CAD/xilinx/SDx/2016.3/Vivado/bin/vivado &"
+alias sdx="$CAD/xilinx/SDx/2016.3/bin/sdx &"
+
+vivado-tcl() {
+    $CAD/xilinx/SDx/2016.3/Vivado/bin/vivado -mode tcl
+}    
