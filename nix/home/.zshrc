@@ -216,6 +216,8 @@ fi
 export LANGUAGE='en_US.UTF-8'
 export TERM=xterm-256color
 
+export EDITOR=micro
+
 source ~/etc/zsh/zsh-git-prompt/zshrc.sh
 
 # Set prompts
