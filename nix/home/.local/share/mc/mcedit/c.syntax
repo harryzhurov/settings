@@ -40,9 +40,9 @@ context default
     keyword whole \[\s\t\]default white
     keyword whole linestart \[\s\t\]\{ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\}\[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\]: cyan
 
-    keyword /\* gray
-    keyword \*/ gray
-    keyword // gray
+    keyword /\* brown
+    keyword \*/ brown
+    keyword // brown
 
     keyword '\\\{"abtnvfr\}' brightgreen
     keyword '\\\{0123\}\{01234567\}\{01234567\}' brightgreen
@@ -78,16 +78,16 @@ context default
     keyword } brightcyan
     keyword ~ brightcyan
 
-context exclusive /\* \*/ gray
+context exclusive /\* \*/ brown
     spellcheck
 
-context exclusive // \n gray
+context exclusive // \n brown
     spellcheck
 
 context linestart # \n brightgreen
     keyword \\\n white
-    keyword /\**\*/ gray
-    keyword //*\n gray
+    keyword /\**\*/ brown
+    keyword //*\n brown
     keyword "+" green
     keyword <+> green
 
