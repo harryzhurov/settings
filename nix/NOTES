@@ -49,3 +49,18 @@ sudo apt-get install avr-libc
 
 # MSP430
 sudo apt-get install gcc-msp430
+
+
+#**************************************************
+#
+#  Misc
+#
+Setup Google Drive
+
+1. sudo apt install gnome-control-center gnome-online-accounts
+
+2. Чтобы запустить GNOME Control Center со всеми доступными панелями в окружениях рабочего стола, 
+отличных от GNOME/Unity, вы можете использовать следующие команды:
+
+XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+
