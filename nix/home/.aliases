@@ -81,6 +81,9 @@ ai() {
     sudo apt install $@
 }
 
+
+#/ Usage: envof <PID>
+#/ Display the environment of the process with pid <PID>
 envof() { sed 's/\x0/\n/g' /proc/${1}/environ; }
 
 #--------------------------------------------------------------
