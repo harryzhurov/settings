@@ -1,0 +1,131 @@
+# CONKY
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_type desktop #normal,override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+#own_window_argb_visual yes
+#own_window_argb_value 0
+
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# fiddle with window
+use_spacer none
+use_xft yes
+#xftfont Dejavu Sans Mono:size=12
+xftfont Terminus (TTF):style=Bold:size=14
+
+# Update interval in seconds
+update_interval 1
+
+# Minimum size of text area
+minimum_size 350 600
+maximum_width 500
+
+# Draw shades?
+draw_shades no
+
+# Text stuff
+draw_outline no # amplifies text if yes
+draw_borders no
+# font arial
+uppercase no # set to yes if you want all text to be in uppercase
+
+# Stippled borders?
+stippled_borders 3
+
+# border width
+border_width 0
+
+# Default colors and also border colors, grey90 == #e5e5e5
+default_color BBBBBB
+background true
+
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+gap_x 1930
+gap_y 35
+
+
+# Colors w/b
+color1 FFFFFF   # white
+color2 BBBBBB   # grey
+color3 999999   # dark grey
+color4 00A0A0   # lignt cyan
+color5 A0A0FF   # light blue
+# Colors red
+color6 FF5151   # light red
+color7 00D200   # light green
+color8 FF7F00   # orange
+# Colors green
+color9 FFAA96   # 
+
+
+# stuff after 'TEXT' will be formatted on screen
+
+TEXT
+${font :bold}${color1}Network$font$color
+${color1}${hr 3}$color
+${alignc}External IP: ${texeci 60 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'}
+
+${color9}Internet   Interface    Gate IP $color
+${color5}           $gw_iface      $gw_ip$color
+
+#
+# Traffic
+#
+# WLAN 0
+#${if_existing /proc/net/route wlan0}#
+
+# ETH 0
+${if_existing /proc/net/route enp3s0}\
+${alignc}Internal IP 0: ${addr enp3s0}
+Down: ${downspeed enp3s0}/s${alignr}Up: ${upspeed enp3s0}/s
+${color4}${downspeedgraph enp3s0 40,220 9000} ${alignr}${upspeedgraph enp3s0 40,220 9000}$color
+Today: ${goto 150}${texeci 10 vnstat -i enp3s0| grep "today" | awk '{print $2 $3}'} ${goto 360}${texeci 5 vnstat -i enp3s0| grep "today" | awk '{print $5 $6}'}
+Week: ${goto 150}${texeci 10 vnstat -w -i enp3s0| grep "current week" | awk '{print $3 $4}'} ${goto 360}${texeci 5 vnstat -w -i enp3s0| grep "current week" | awk '{print $6 $7}'}
+Month: ${goto 150}${texeci 10 vnstat -i enp3s0| grep "`date +"'%y"`" | tail -1 | awk '{print $3 $4}'} ${goto 360}${texeci 5 vnstat -m -i enp3s0| grep "`date +"'%y"`" | tail -1 | awk '{print $6 $7}'}
+${endif}
+# ETH 1
+${if_existing /proc/net/route enp4s0}\
+${alignc}Internal IP 1: ${addr enp4s0}
+Down: ${downspeed enp4s0}/s${alignr}Up: ${upspeed enp4s0}/s
+${color7}${downspeedgraph enp4s0 40,220 9000} ${alignr}${upspeedgraph enp4s0 40,220 9000}$color
+Today: ${goto 150}${texeci 10 vnstat -i enp4s0| grep "today" | awk '{print $2 $3}'} ${goto 360}${texeci 5 vnstat -i enp4s0| grep "today" | awk '{print $5 $6}'}
+Week: ${goto 150}${texeci 10 vnstat -w -i enp4s0| grep "current week" | awk '{print $3 $4}'} ${goto 360}${texeci 5 vnstat -w -i enp4s0| grep "current week" | awk '{print $6 $7}'}
+Month: ${goto 150}${texeci 10 vnstat -i enp4s0| grep "`date +"'%y"`" | tail -1 | awk '{print $3 $4}'} ${goto 360}${texeci 5 vnstat -m -i enp4s0| grep "`date +"'%y"`" | tail -1 | awk '{print $6 $7}'}
+${endif}
+## USB 0
+#${if_existing /proc/net/route usb0}#
+#Down: ${downspeed usb0}/s   Up: ${upspeed usb0}/s    
+#${color3}${downspeedgraph usb0 40,140 9000} ${alignr}${upspeedgraph usb0 40,140 9000}$color
+#Today: ${goto 60}${texeci 10 vnstat -i usb0| grep "today" | awk '{print $2 $3}'}${goto 165}Today: ${goto 220}${texeci 5 vnstat -i usb0| grep "today" | awk '{print $5 $6}'}
+#Week: ${goto 60}${texeci 10 vnstat -w -i usb0| grep "current week" | awk '{print $3 $4}'}${goto 165}Week: ${goto 220}${texeci 5 vnstat -w -i usb0| grep "current week" | awk '{print $6 $7}'} 
+#Month: ${goto 60}${texeci 10 vnstat -i usb0| grep "`date +"'%y"`" | tail -1 | awk '{print $3 $4}'}${goto 165}Month: ${goto 220}${texeci 5 vnstat -m -i usb0| grep "`date +"'%y"`" | tail -1 | awk '{print $6 $7}'}
+## USB 1
+#${else}${if_existing /proc/net/route usb1}#
+#Down: ${downspeed usb1}/s   Up: ${upspeed usb1}/s    
+#${color3}${downspeedgraph usb1 40,140 9000} ${alignr}${upspeedgraph usb1 40,140 9000}$color
+#Today: ${goto 60}${texeci 10 vnstat -i usb1| grep "today" | awk '{print $2 $3}'}${goto 165}Today: ${goto 220}${texeci 5 vnstat -i usb1| grep "today" | awk '{print $5 $6}'}
+#Week: ${goto 60}${texeci 10 vnstat -w -i usb1| grep "current week" | awk '{print $3 $4}'}${goto 165}Week: ${goto 220}${texeci 5 vnstat -w -i usb1| grep "current week" | awk '{print $6 $7}'} 
+#Month: ${goto 60}${texeci 10 vnstat -i usb1| grep "`date +"'%y"`" | tail -1 | awk '{print $3 $4}'}${goto 165}Month: ${goto 220}${texeci 5 vnstat -m -i usb1| grep "`date +"'%y"`" | tail -1 | awk '{print $6 $7}'}
+#${else}
+#${font :bold}${color red}${alignc}Network disconnected ! ! !$font ${color}
+#${endif}${endif}#
+
+
+${font :bold}${color1}Motherboard Hardware$font$color
+${color1}${hr 3}$color
+${color EDCFA4}${texeci 6 sensors | awk '{ if(NR >= 3 && NR <= 11) {print substr($0,0,30)} }'}${color}
+
+
