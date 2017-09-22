@@ -33,8 +33,8 @@ limit -s
 umask 022
 
 # Set up aliases and environment variables
-source ~/.aliases
 source ~/.env
+source ~/.aliases
 
 # Shell functions
 setenv() { typeset -x "${1}${1:+=}${(@)argv[2,$#]}" }  # csh compatibility
