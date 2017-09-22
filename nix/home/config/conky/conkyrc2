@@ -2,7 +2,8 @@
 
 # Create own window instead of using desktop (required in nautilus)
 own_window yes
-own_window_type desktop #normal,override
+own_window_class Conky
+own_window_type desktop
 own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
@@ -24,7 +25,7 @@ update_interval 1
 
 # Minimum size of text area
 minimum_size 350 200
-maximum_width 1000
+maximum_width 1360
 
 # Draw shades?
 draw_shades no
@@ -53,7 +54,7 @@ alignment top_left
 #alignment bottom_right
 
 # Gap between borders of screen and text
-gap_x 600
+gap_x 550
 gap_y 940
 
 

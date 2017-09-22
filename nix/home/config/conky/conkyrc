@@ -10,10 +10,10 @@
 
 # Create own window instead of using desktop (required in nautilus)
 own_window yes
+own_window_class Conky
 own_window_type desktop
 own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-
 #own_window_argb_visual yes
 #own_window_argb_value 0
 
@@ -75,7 +75,6 @@ color6  FF5151   # light red
 color7  00D200   # light green
 color8  FF7F00   # orange
 color9  FFAA96   # 
-color10 EDCFA4   # 
 
 
 # stuff after 'TEXT' will be formatted on screen
