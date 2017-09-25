@@ -105,11 +105,11 @@ ${top name 7} ${top pid 7} ${top cpu 7}  ${top mem 7}   ${top mem_res 7}
 
 ${font :bold}${color1}Memory$font$color
 ${color1}${hr 3}$color
+${color3}${memgraph 30 EDCFA4}${color}
 ${alignr}$mem of $memmax ($memperc%)
-Memory $memperc%${goto 100} ${color7}${membar 6}$color
+RAM  $memperc%${goto 100} ${color7}${membar 6}$color
 ${alignr}$swap of $swapmax ($swapperc%)
-Swap    $swapperc%${goto 100} ${color7}${swapbar 6}$color
-${color EDCFA4}${memgraph 30}${color}
+Swap  $swapperc%${goto 100} ${color7}${swapbar 6}$color
 
 ${color4}NAME              PID    CPU%    MEM%    MEM$color
 ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1}  ${top_mem mem 1}   ${top_mem mem_res 1}
@@ -132,9 +132,9 @@ SDC: ${color9}${execi 60 sudo hddtemp /dev/sdc  | awk '{print $4}'}$color
 ${font :bold}${color1}Disks$color
 ${color1}${hr 3}$color
         ${color6}R:   $color${diskio_read}   ${alignr}${color5}W:   $color${diskio_write}$font
-SDA: ${color8}${diskiograph /dev/sda 16}${color}
-SDB: ${color8}${diskiograph /dev/sdb 16}${color}
-SDC: ${color8}${diskiograph /dev/sdc 16}${color}
+SDA: ${color3}${diskiograph /dev/sda 16,440 FF7F00 FF7F00}${color}
+SDB: ${color3}${diskiograph /dev/sdb 16,440 FF7F00 FF7F00}${color}
+SDC: ${color3}${diskiograph /dev/sdc 16,440 FF7F00 FF7F00}${color}
 
 /   ${fs_used /} of ${fs_size /} ${alignr}${fs_free /} (${fs_free_perc /}%)
 ${color7}${fs_bar 6 /}$color
