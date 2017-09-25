@@ -19,7 +19,7 @@
 
 feh --bg-fill --no-fehbg /home/hz/xdg/pictures/UT_1600x1200.jpg &
 
-(sleep 5 && start-conky.sh) &
+(sleep 5 && ~/.config/conky/start-conky.sh) &
 
 xfce4-panel &
 
