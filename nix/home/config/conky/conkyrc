@@ -106,9 +106,9 @@ ${top name 7} ${top pid 7} ${top cpu 7}  ${top mem 7}   ${top mem_res 7}
 ${font :bold}${color1}Memory$font$color
 ${color1}${hr 3}$color
 ${alignr}$mem of $memmax ($memperc%)
-$memperc% ${color7}${membar 6}$color
-   $swap of $swapmax ($swapperc%)
-$swapperc% ${color7}${swapbar 6}$color
+Memory $memperc%${goto 100} ${color7}${membar 6}$color
+${alignr}$swap of $swapmax ($swapperc%)
+Swap    $swapperc%${goto 100} ${color7}${swapbar 6}$color
 ${color EDCFA4}${memgraph 30}${color}
 
 ${color4}NAME              PID    CPU%    MEM%    MEM$color
