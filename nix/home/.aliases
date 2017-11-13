@@ -96,3 +96,4 @@ alias xsdk="$CAD/xilinx/SDx/2016.3/bin/sdx &"
 vivado-tcl() {
     $CAD/xilinx/SDx/2016.3/Vivado/bin/vivado -mode tcl
 }    
+
