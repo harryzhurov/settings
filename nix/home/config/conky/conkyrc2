@@ -1,0 +1,80 @@
+# CONKY
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_class Conky
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+#own_window_argb_visual yes
+#own_window_argb_value 0
+
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# fiddle with window
+use_spacer none
+use_xft yes
+#xftfont Dejavu Sans Mono:size=12
+xftfont Terminus (TTF):style=Bold:size=14
+
+# Update interval in seconds
+update_interval 1
+
+# Minimum size of text area
+minimum_size 350 200
+maximum_width 1360
+
+# Draw shades?
+draw_shades no
+
+# Text stuff
+draw_outline no # amplifies text if yes
+draw_borders no
+# font arial
+uppercase no # set to yes if you want all text to be in uppercase
+
+# Stippled borders?
+stippled_borders 3
+
+# border width
+border_width 0
+
+# Default colors and also border colors, grey90 == #e5e5e5
+default_color BBBBBB
+background true
+
+
+# Text alignment, other possible values are commented
+alignment top_left
+#alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+gap_x 550
+gap_y 940
+
+
+# Colors w/b
+color1 FFFFFF   # white
+color2 BBBBBB   # grey
+color3 999999   # dark grey
+color4 00A0A0   # lignt cyan
+color5 A0A0FF   # light blue
+# Colors red
+color6 FF5151   # light red
+color7 00D200   # light green
+color8 FF7F00   # orange
+# Colors green
+color9 FFAA96   # 
+
+
+# stuff after 'TEXT' will be formatted on screen
+
+TEXT
+${font :bold}${color1}Kernel Log$font$color
+${color1}${hr 3}$color
+${color2}${texeci 2 cat /var/log/kern.log | tail | cut --fields=1-3,7- --delimiter=" "}${color}

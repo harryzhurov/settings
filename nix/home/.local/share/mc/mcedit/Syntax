@@ -43,7 +43,7 @@ include sh.syntax
 file ..\*\\.(pl|PL|pm|PM|psgi|PSGI)$ Perl\sProgram ^#!.\*([\s/]perl|/usr/bin/perl)
 include perl.syntax
 
-file ..\*\\.(py|PY)$ Python\sProgram ^#!.\*([\s/]python|/usr/bin/python)
+file ..\*\\.(py|PY)|SConstruct|sconstruct|SConscript|sconscript$ Python\sProgram ^#!.\*([\s/]python|/usr/bin/python)
 include python.syntax
 
 file ..\*\\.(pyx|pxd|pxi)$ Cython\sor\sPyrex\sProgram

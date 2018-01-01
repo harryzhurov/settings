@@ -1,0 +1,146 @@
+# CONKY
+
+#   install lm-sensors - for temperature monitoring of CPU, GPU, etc.
+#   hddtemp
+#   sudo dpkg-reconfigure hddtemp, if hddtemp not working, nc localhost 7634
+#   vnstat - network traffic
+#   di - disk info
+
+# CONKY
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_class Conky
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+#own_window_argb_visual yes
+#own_window_argb_value 0
+
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# fiddle with window
+use_spacer none
+use_xft yes
+#xftfont Dejavu Sans Mono:size=12
+xftfont Terminus (TTF):style=Bold:size=14
+
+# Update interval in seconds
+update_interval 1
+
+# Minimum size of text area
+minimum_size 350 600
+maximum_width 500
+
+# Draw shades?
+draw_shades no
+
+# Text stuff
+draw_outline no # amplifies text if yes
+draw_borders no
+# font arial
+uppercase no # set to yes if you want all text to be in uppercase
+
+# Stippled borders?
+stippled_borders 3
+
+# border width
+border_width 0
+
+# Default colors and also border colors, grey90 == #e5e5e5
+default_color CCCCCC
+background true
+
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_left
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+gap_x 10
+gap_y 10
+
+
+# Colors w/b
+color1  FFFFFF   # white
+color2  BBBBBB   # grey
+color3  999999   # dark grey
+color4  00A0A0   # lignt cyan
+color5  A0A0FF   # light blue
+color6  FF5151   # light red
+color7  00D200   # light green
+color8  FF7F00   # orange
+color9  FFAA96   # 
+
+
+# stuff after 'TEXT' will be formatted on screen
+
+TEXT
+${font :bold}${color1}General$font$color
+${color1}${hr 3}$color
+Host: $nodename ${alignr}Uptime: ${uptime}
+${texeci 60 lsb_release -d | awk '{$1=""; print $0}'} ${alignr}Kernel: ${kernel} 
+
+${font :bold}${color1}CPU$font$color
+${color1}${hr 3}$color
+#${execi 3600 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //' | cut -c1-10,39-44}
+${alignr} ${freq}MHz
+CPU 1: ${cpu cpu1}% ${goto 100} ${cpugraph cpu1 16,150 FF8080 FF8080} ${color5}${cpubar cpu1}$color
+CPU 2: ${cpu cpu2}% ${goto 100} ${cpugraph cpu2 16,150 FF8080 FF8080} ${color5}${cpubar cpu2}$color
+CPU 3: ${cpu cpu3}% ${goto 100} ${cpugraph cpu3 16,150 FF8080 FF8080} ${color5}${cpubar cpu3}$color
+CPU 4: ${cpu cpu4}% ${goto 100} ${cpugraph cpu4 16,150 FF8080 FF8080} ${color5}${cpubar cpu4}$color
+
+${color4}NAME              PID    CPU%    MEM%    MEM$color
+${top name 1} ${top pid 1} ${top cpu 1}  ${top mem 1}   ${top mem_res 1}
+${top name 2} ${top pid 2} ${top cpu 2}  ${top mem 2}   ${top mem_res 2}
+${top name 3} ${top pid 3} ${top cpu 3}  ${top mem 3}   ${top mem_res 3}
+${top name 4} ${top pid 4} ${top cpu 4}  ${top mem 4}   ${top mem_res 4}
+${top name 5} ${top pid 5} ${top cpu 5}  ${top mem 5}   ${top mem_res 5}
+${top name 6} ${top pid 6} ${top cpu 6}  ${top mem 6}   ${top mem_res 6}
+${top name 7} ${top pid 7} ${top cpu 7}  ${top mem 7}   ${top mem_res 7}
+
+${font :bold}${color1}Memory$font$color
+${color1}${hr 3}$color
+${color3}${memgraph 30 EDCFA4}${color}
+${alignr}$mem of $memmax ($memperc%)
+RAM  $memperc%${goto 100} ${color7}${membar 6}$color
+${alignr}$swap of $swapmax ($swapperc%)
+Swap  $swapperc%${goto 100} ${color7}${swapbar 6}$color
+
+${color4}NAME              PID    CPU%    MEM%    MEM$color
+${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1}  ${top_mem mem 1}   ${top_mem mem_res 1}
+${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2}  ${top_mem mem 2}   ${top_mem mem_res 2}
+${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3}  ${top_mem mem 3}   ${top_mem mem_res 3}
+${top_mem name 4} ${top_mem pid 4} ${top_mem cpu 4}  ${top_mem mem 4}   ${top_mem mem_res 4}
+${top_mem name 5} ${top_mem pid 5} ${top_mem cpu 5}  ${top_mem mem 5}   ${top_mem mem_res 5}
+${top_mem name 6} ${top_mem pid 6} ${top_mem cpu 6}  ${top_mem mem 6}   ${top_mem mem_res 6}
+${top_mem name 7} ${top_mem pid 7} ${top_mem cpu 7}  ${top_mem mem 7}   ${top_mem mem_res 7}
+
+
+${font :bold}${color1}Temperature$font$color
+${color1}${hr 3}$color
+
+CPU: ${color9}${hwmon temp 01}°С$color    \
+SDA: ${color9}${execi 60 sudo hddtemp /dev/sda  | awk '{print $3}'}$color    \
+SDB: ${color9}${execi 60 sudo hddtemp /dev/sdb  | awk '{print $4}'}$color    \
+SDC: ${color9}${execi 60 sudo hddtemp /dev/sdc  | awk '{print $4}'}$color
+
+${font :bold}${color1}Disks$color
+${color1}${hr 3}$color
+        ${color6}R:   $color${diskio_read}   ${alignr}${color5}W:   $color${diskio_write}$font
+SDA: ${color3}${diskiograph /dev/sda 16,440 FF7F00 FF7F00}${color}
+SDB: ${color3}${diskiograph /dev/sdb 16,440 FF7F00 FF7F00}${color}
+SDC: ${color3}${diskiograph /dev/sdc 16,440 FF7F00 FF7F00}${color}
+
+/   ${fs_used /} of ${fs_size /} ${alignr}${fs_free /} (${fs_free_perc /}%)
+${color7}${fs_bar 6 /}$color
+/home   ${fs_used /home} of ${fs_size /home} ${alignr}${fs_free /home} (${fs_free_perc /home}%)
+${color7}${fs_bar 6 /home} }$color
+/opt   ${fs_used /opt} of ${fs_size /opt} ${alignr}${fs_free /opt} (${fs_free_perc /opt}%)
+${color7}${fs_bar 6 /opt}$color
+
+

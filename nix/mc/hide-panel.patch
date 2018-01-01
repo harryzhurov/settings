@@ -1,14 +1,14 @@
-diff --git a/src/subshell.c b/src/subshell.c
-index ebd1667..8a9da30 100644
+diff --git a/src/subshell/common.c b/src/subshell/common.c
+index 6667b6e59..2ed51cd0a 100644
 --- a/src/subshell/common.c
 +++ b/src/subshell/common.c
-@@ -570,7 +570,8 @@ feed_subshell (int how, int fail_on_error)
+@@ -604,7 +604,8 @@ feed_subshell (int how, gboolean fail_on_error)
              }
  
              for (i = 0; i < bytes; ++i)
 -                if (pty_buffer[i] == subshell_switch_key)
++                //if (pty_buffer[i] == subshell_switch_key)
 +                if (i > 0 && pty_buffer[i] == 0x78 && pty_buffer[i-1] == 0x1b )   // alt-x binding
-+                //if (pty_buffer[i] == subshell_switch_key)                       // ctrl-o binding
                  {
                      write_all (mc_global.tty.subshell_pty, pty_buffer, i);
                      if (subshell_ready)

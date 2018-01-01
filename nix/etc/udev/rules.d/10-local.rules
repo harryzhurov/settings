@@ -63,6 +63,15 @@ SUBSYSTEM=="usb", ATTRS{product}=="STM32 STLink", MODE:="0666"
 
 #LABEL="altera_debug_tools_rules_end"
 
+# USB-Blaster
+SUBSYSTEM=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6001", MODE:="0666"
+
+
 # USB-Blaster II
 SUBSYSTEM=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6010", MODE:="0666"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6810", MODE:="0666"
+
+
+# ZedBoard
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6014", MODE:="0666"
+

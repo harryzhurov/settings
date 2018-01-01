@@ -10,6 +10,12 @@ s       Copmare files/directories with same name
      diffuse %f %D/%f > /dev/null 2>&1 &
 
 
+=+ t r | t d
+d       Copmare directories with same name
+     meld %d %D > /dev/null 2>&1 &
+
+
+
 + ! t t
 @       Do something on the current file
 	CMD=%{Enter command}
