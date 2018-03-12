@@ -44,6 +44,7 @@ alias la='l -A'
 #   Misc
 #
 alias grep='grep --color=auto'
+alias cl='cal -3NMw'
 
 #--------------------------------------------------------------
 #
