@@ -93,10 +93,10 @@ reset="%{$reset_color%}"
 
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
-    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;074m' \
     LESS_TERMCAP_me=$'\E[0m' \
     LESS_TERMCAP_se=$'\E[0m' \
-    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_so=$'\E[38;5;246;48;5;056m' \
     LESS_TERMCAP_ue=$'\E[0m' \
     LESS_TERMCAP_us=$'\E[04;38;5;146m' \
     man "$@"
@@ -105,8 +105,7 @@ man() {
 
 # Some environment variables
 export MAIL=/var/spool/mail/$USERNAME
-#export LESS=-cex3M
-export LESS=-R
+export LESS='-R'
 export HELPDIR=/usr/share/zsh/$ZSH_VERSION/help  # directory for run-help function to find docs
 
 BFIN_ELF_MAN="$CAD/adi/bfin-elf/man:$CAD/adi/bfin-elf/share/man"
