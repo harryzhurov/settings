@@ -105,7 +105,8 @@ man() {
 
 # Some environment variables
 export MAIL=/var/spool/mail/$USERNAME
-export LESS=-cex3M
+#export LESS=-cex3M
+export LESS=-R
 export HELPDIR=/usr/share/zsh/$ZSH_VERSION/help  # directory for run-help function to find docs
 
 BFIN_ELF_MAN="$CAD/adi/bfin-elf/man:$CAD/adi/bfin-elf/share/man"
