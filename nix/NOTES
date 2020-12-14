@@ -64,3 +64,16 @@ Setup Google Drive
 
 XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 
+
+#**************************************************
+#
+#  Conky
+#
+Allow Conky to access hddtemp without sudo password
+
+1. Open /etc/sudoers for edit
+
+2. Add the following line:
+
+%users  ALL=NOPASSWD: /usr/sbin/hddtemp
+

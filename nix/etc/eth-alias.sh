@@ -1,6 +1,6 @@
 #!/bin/sh
 
-modprobe dummy
+modprobe dummy numdummies=1
 ifconfig dummy0 hw ether 00:26:18:9b:ab:3c
 #ifup dummy0
 ip link set name eth0 dev dummy0

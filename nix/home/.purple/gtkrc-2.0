@@ -14,13 +14,13 @@ widget_class "*" style "purplerc_style"
 
 style "*pidgin_conv_entry_style"
 {
-	font_name = "DejaVu Sans 10"
+	font_name = "DejaVu Sans 14"
 }
 widget "*pidgin_conv_entry" style "*pidgin_conv_entry_style"
 
 style "*pidgin_conv_imhtml_style"
 {
-	font_name = "DejaVu Sans 10"
+	font_name = "DejaVu Sans 14"
 }
 widget "*pidgin_conv_imhtml" style "*pidgin_conv_imhtml_style"
 

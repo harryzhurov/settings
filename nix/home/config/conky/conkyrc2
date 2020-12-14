@@ -55,7 +55,7 @@ alignment top_left
 
 # Gap between borders of screen and text
 gap_x 550
-gap_y 940
+gap_y 1160
 
 
 # Colors w/b

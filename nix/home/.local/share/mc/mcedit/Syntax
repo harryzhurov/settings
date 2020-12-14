@@ -76,7 +76,7 @@ include pascal.syntax
 file ..\*\\.(ada|adb|ads|ADA|ADB|ADS)$ Ada\sProgram
 include ada95.syntax
 
-file ..\*\\.(tcl|itcl|TCL|ITCL)$ Tcl\sProgram
+file ..\*\\.(tcl|itcl|TCL|ITCL|sdc|xdc)$ Tcl\sProgram
 include tcl.syntax
 
 file ..\*\\.(sl|SL)$ S-Lang\sProgram
@@ -223,7 +223,7 @@ include cabal.syntax
 file ..\*\\.(n|N)$ Nemerle\sProgram
 include nemerle.syntax
 
-file ..\*\\.(v|V)$ Verilog\sDevice\sDescription
+file ..\*\\.(v|V|sv|vh|svh)$ Verilog\sDevice\sDescription
 include verilog.syntax
 
 file ..\*\\.(hdl|vhd|vdhl|HDL|VHD|VHDL)$ VHDL\sDevice\sDescription

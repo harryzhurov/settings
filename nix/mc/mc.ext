@@ -535,7 +535,9 @@ type/^PostScript
 type/^PDF
 	#Open=/usr/local/libexec/mc/ext.d/doc.sh open pdf
 #	Open=(/usr/bin/evince %f > /dev/null 2>&1 &)
-	Open=(/usr/bin/qpdfview --unique %f > /dev/null 2>&1 &)
+#	Open=(/usr/bin/qpdfview --unique %f > /dev/null 2>&1 &)
+#	Open=(/usr/bin/okular %f > /dev/null 2>&1 &)
+	Open=(/usr/bin/acroread %f > /dev/null 2>&1 &)
 	View=%view{ascii} /usr/local/libexec/mc/ext.d/doc.sh view pdf
 
 # html

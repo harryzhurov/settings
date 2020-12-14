@@ -44,7 +44,7 @@ alias la='l -A'
 #   Misc
 #
 alias grep='grep --color=auto'
-alias cl='cal -3NMw'
+alias cl='ncal -3Mw'
 
 #--------------------------------------------------------------
 #
@@ -91,10 +91,10 @@ envof() { sed 's/\x0/\n/g' /proc/${1}/environ; }
 #
 #   CAD  
 #
-alias vivado="$CAD/xilinx/SDx/2016.3/Vivado/bin/vivado &"
-alias xsdk="$CAD/xilinx/SDx/2016.3/bin/sdx &"
+alias vivado-gui="$CADSSD/xilinx/Vivado/2018.2/bin/vivado -mode gui &"
+alias xsdk="$CADSSD/xilinx/Vivado/2018.1/bin/sdx &"
 
 vivado-tcl() {
-    $CAD/xilinx/SDx/2016.3/Vivado/bin/vivado -mode tcl
+    $CADSSD/xilinx/Vivado/2018.2/bin/vivado -mode tcl
 }    
 

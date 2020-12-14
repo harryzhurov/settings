@@ -22,7 +22,7 @@ bindkey '\e[5~' up-line-or-history              # page-up
 bindkey '\e[6~' down-line-or-history            # page-down
 
 # Search path for the cd command
-cdpath=(.. ~ ~/slon/ ~/incoming ~/pro/ ~/pro/racurs/ ~/cad ~/etc/settings/)
+cdpath=(.. ~ /opt /opt/slon/ /opt/incoming /opt/pro/ /opt/pro/racurs/ /opt/cad ~/etc/settings/ /opt/ssd/pro)
 
 # Use hard limits, except for a smaller stack and no core dumps
 unlimit
@@ -216,7 +216,7 @@ fi
 export LANGUAGE='en_US.UTF-8'
 export TERM=xterm-256color
 
-#export EDITOR=micro
+export EDITOR=fte
 
 source ~/etc/zsh/zsh-git-prompt/zshrc.sh
 
@@ -253,5 +253,4 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 #ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 
 source /home/hz/etc/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
+#source $CADSSD/xilinx/Vivado/2018.2/settings64.sh

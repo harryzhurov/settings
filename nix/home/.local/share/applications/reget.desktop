@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Name=ReGet Deluxe
-Icon=C54F_regetdx.0
+Icon=/opt/dist/tools/reget/reget_deluxe.png
 Exec=/home/hz/bin/reget.sh
 NoDisplay=false
 Categories=Utility;

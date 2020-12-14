@@ -54,7 +54,7 @@ alignment top_right
 #alignment bottom_right
 
 # Gap between borders of screen and text
-gap_x 1930
+gap_x 2700
 gap_y 35
 
 
@@ -70,7 +70,6 @@ color7 00D200   # light green
 color8 FF7F00   # orange
 # Colors green
 color9 FFAA96   # 
-
 
 show_graph_scale no
 show_graph_range no
