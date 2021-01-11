@@ -1,0 +1,103 @@
+[global_config]
+  enabled_plugins = InactivityWatch, TerminalShot, APTURLHandler, LaunchpadBugURLHandler
+  title_transmit_bg_color = "#00038e"
+  window_state = maximise
+[keybindings]
+  close_term = <Primary>q
+  cycle_prev = None
+  go_left = None
+  go_next = None
+  go_prev = None
+  go_right = None
+  help = <Super>F1
+  next_tab = <Alt>Right
+  prev_tab = <Alt>Left
+  split_horiz = <Alt><Super>h
+  split_vert = <Alt><Super>v
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1318, 739
+      title = /usr/bin/zsh
+      type = Window
+    [[[child1]]]
+      active_page = 3
+      labels = 11, 22, 33, 44
+      last_active_term = 08e77d93-bacf-44dd-9a78-8a3ee9271b7f, 7fa2211d-b6de-40ee-81ce-4f9bf70bb6f5, 8bc3bb89-fb8d-485d-aa44-07ef3e7d6073, f2397b96-495d-48cf-851a-150c920557f7
+      order = 0
+      parent = child0
+      type = Notebook
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 08e77d93-bacf-44dd-9a78-8a3ee9271b7f
+    [[[terminal3]]]
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 7fa2211d-b6de-40ee-81ce-4f9bf70bb6f5
+    [[[terminal4]]]
+      order = 2
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 8bc3bb89-fb8d-485d-aa44-07ef3e7d6073
+    [[[terminal5]]]
+      order = 3
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = f2397b96-495d-48cf-851a-150c920557f7
+  [[1]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1318, 739
+      title = /usr/bin/zsh
+      type = Window
+    [[[child1]]]
+      active_page = 1
+      labels = 11, 44
+      last_active_term = 08e77d93-bacf-44dd-9a78-8a3ee9271b7f, f2397b96-495d-48cf-851a-150c920557f7
+      order = 0
+      parent = child0
+      type = Notebook
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 08e77d93-bacf-44dd-9a78-8a3ee9271b7f
+    [[[terminal3]]]
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = f2397b96-495d-48cf-851a-150c920557f7
+[plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_darkness = 1.0
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    cursor_shape = ibeam
+    custom_command = env TERM-xterm-256color
+    font = Terminus (TTF) Bold 14
+    palette = "#2e3436:#9d0303:#4e9a06:#eacb40:#3465a4:#ac3abe:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fbff00:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    use_system_font = False
