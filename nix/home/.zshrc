@@ -77,7 +77,7 @@ alias -s kicad_pcb='~/bin/background $KICAD/bin/pcbnew'
 #export MANPATH
 
 # Hosts to use for completion (see later zstyle)
-hosts=(`hostname` ftp.math.gatech.edu prep.ai.mit.edu wuarchive.wustl.edu)
+#hosts=(`hostname` ftp.math.gatech.edu prep.ai.mit.edu wuarchive.wustl.edu)
 
 
 # Set colors
@@ -214,6 +214,8 @@ if [[ -f ~/local/bin/mc ]]; then
 fi
 
 export LANGUAGE='en_US.UTF-8'
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
 export TERM=xterm-256color
 
 #export EDITOR=micro
