@@ -76,7 +76,6 @@ color7  00D200   # light green
 color8  FF7F00   # orange
 color9  FFAA96   # 
 
-
 # stuff after 'TEXT' will be formatted on screen
 
 TEXT
@@ -93,6 +92,8 @@ CPU 1: ${cpu cpu1}% ${goto 100} ${cpugraph cpu1 16,150 FF8080 FF8080} ${color5}$
 CPU 2: ${cpu cpu2}% ${goto 100} ${cpugraph cpu2 16,150 FF8080 FF8080} ${color5}${cpubar cpu2}$color
 CPU 3: ${cpu cpu3}% ${goto 100} ${cpugraph cpu3 16,150 FF8080 FF8080} ${color5}${cpubar cpu3}$color
 CPU 4: ${cpu cpu4}% ${goto 100} ${cpugraph cpu4 16,150 FF8080 FF8080} ${color5}${cpubar cpu4}$color
+CPU 5: ${cpu cpu5}% ${goto 100} ${cpugraph cpu5 16,150 FF8080 FF8080} ${color5}${cpubar cpu4}$color
+CPU 6: ${cpu cpu6}% ${goto 100} ${cpugraph cpu6 16,150 FF8080 FF8080} ${color5}${cpubar cpu4}$color
 
 ${color4}NAME              PID    CPU%    MEM%    MEM$color
 ${top name 1} ${top pid 1} ${top cpu 1}  ${top mem 1}   ${top mem_res 1}
@@ -123,18 +124,18 @@ ${top_mem name 7} ${top_mem pid 7} ${top_mem cpu 7}  ${top_mem mem 7}   ${top_me
 
 ${font :bold}${color1}Temperature$font$color
 ${color1}${hr 3}$color
+CPU: ${color9}${hwmon temp 01}°С$color
+SDA: ${color9}${execi 60 hddtemp /dev/sda  | awk '{print $3 " " $4}'}$color    \
+#SDB: ${color9}${execi 60 sudo hddtemp /dev/sdb  | awk '{print $4}'}$color    \
+#SDC: ${color9}${execi 60 sudo hddtemp /dev/sdc  | awk '{print $4}'}$color
 
-CPU: ${color9}${hwmon temp 01}°С$color    \
-SDA: ${color9}${execi 60 sudo hddtemp /dev/sda  | awk '{print $3}'}$color    \
-SDB: ${color9}${execi 60 sudo hddtemp /dev/sdb  | awk '{print $4}'}$color    \
-SDC: ${color9}${execi 60 sudo hddtemp /dev/sdc  | awk '{print $4}'}$color
 
 ${font :bold}${color1}Disks$color
 ${color1}${hr 3}$color
         ${color6}R:   $color${diskio_read}   ${alignr}${color5}W:   $color${diskio_write}$font
 SDA: ${color3}${diskiograph /dev/sda 16,440 FF7F00 FF7F00}${color}
-SDB: ${color3}${diskiograph /dev/sdb 16,440 FF7F00 FF7F00}${color}
-SDC: ${color3}${diskiograph /dev/sdc 16,440 FF7F00 FF7F00}${color}
+#SDB: ${color3}${diskiograph /dev/sdb 16,440 FF7F00 FF7F00}${color}
+#SDC: ${color3}${diskiograph /dev/sdc 16,440 FF7F00 FF7F00}${color}
 
 /   ${fs_used /} of ${fs_size /} ${alignr}${fs_free /} (${fs_free_perc /}%)
 ${color7}${fs_bar 6 /}$color
@@ -142,5 +143,5 @@ ${color7}${fs_bar 6 /}$color
 ${color7}${fs_bar 6 /home} }$color
 /opt   ${fs_used /opt} of ${fs_size /opt} ${alignr}${fs_free /opt} (${fs_free_perc /opt}%)
 ${color7}${fs_bar 6 /opt}$color
-
-
+/opt/hdd ${fs_used /opt/hdd} of ${fs_size /opt/hdd} ${alignr}${fs_free /opt/hdd} (${fs_free_perc /opt/hdd}%)
+${color7}${fs_bar 6 /opt}$color
