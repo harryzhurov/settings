@@ -128,8 +128,5 @@ ${endif}
 #${endif}${endif}#
 
 
-${font :bold}${color1}Motherboard Hardware$font$color
-${color1}${hr 3}$color
-${color EDCFA4}${texeci 6 sensors | awk '{ if(NR >= 3 && NR <= 11) {print substr($0,0,30)} }'}${color}
 
 

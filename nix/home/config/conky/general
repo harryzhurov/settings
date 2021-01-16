@@ -113,24 +113,18 @@ ${alignr}$swap of $swapmax ($swapperc%)
 Swap  $swapperc%${goto 100} ${color7}${swapbar 6}$color
 
 ${color4}NAME              PID    CPU%    MEM%    MEM$color
-${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1}  ${top_mem mem 1}   ${top_mem mem_res 1}
-${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2}  ${top_mem mem 2}   ${top_mem mem_res 2}
-${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3}  ${top_mem mem 3}   ${top_mem mem_res 3}
-${top_mem name 4} ${top_mem pid 4} ${top_mem cpu 4}  ${top_mem mem 4}   ${top_mem mem_res 4}
-${top_mem name 5} ${top_mem pid 5} ${top_mem cpu 5}  ${top_mem mem 5}   ${top_mem mem_res 5}
-${top_mem name 6} ${top_mem pid 6} ${top_mem cpu 6}  ${top_mem mem 6}   ${top_mem mem_res 6}
-${top_mem name 7} ${top_mem pid 7} ${top_mem cpu 7}  ${top_mem mem 7}   ${top_mem mem_res 7}
+${top_mem name 1} ${top_mem pid 1}  ${top_mem cpu 1}   ${top_mem mem 1}    ${top_mem mem_res 1}
+${top_mem name 2} ${top_mem pid 2}  ${top_mem cpu 2}   ${top_mem mem 2}    ${top_mem mem_res 2}
+${top_mem name 3} ${top_mem pid 3}  ${top_mem cpu 3}   ${top_mem mem 3}    ${top_mem mem_res 3}
+${top_mem name 4} ${top_mem pid 4}  ${top_mem cpu 4}   ${top_mem mem 4}    ${top_mem mem_res 4}
+${top_mem name 5} ${top_mem pid 5}  ${top_mem cpu 5}   ${top_mem mem 5}    ${top_mem mem_res 5}
+${top_mem name 6} ${top_mem pid 6}  ${top_mem cpu 6}   ${top_mem mem 6}    ${top_mem mem_res 6}
+${top_mem name 7} ${top_mem pid 7}  ${top_mem cpu 7}   ${top_mem mem 7}    ${top_mem mem_res 7}
+${top_mem name 8} ${top_mem pid 8}  ${top_mem cpu 8}   ${top_mem mem 8}    ${top_mem mem_res 8}
+${top_mem name 9} ${top_mem pid 9}  ${top_mem cpu 9}   ${top_mem mem 9}    ${top_mem mem_res 9}
+${top_mem name 10} ${top_mem pid 10} ${top_mem cpu 10}  ${top_mem mem 10}   ${top_mem mem_res 10}
 
-
-${font :bold}${color1}Temperature$font$color
-${color1}${hr 3}$color
-CPU: ${color9}${hwmon temp 01}°С$color
-SDA: ${color9}${execi 60 hddtemp /dev/sda  | awk '{print $3 " " $4}'}$color    \
-#SDB: ${color9}${execi 60 sudo hddtemp /dev/sdb  | awk '{print $4}'}$color    \
-#SDC: ${color9}${execi 60 sudo hddtemp /dev/sdc  | awk '{print $4}'}$color
-
-
-${font :bold}${color1}Disks$color
+${font :bold}${color1}Storage$color
 ${color1}${hr 3}$color
         ${color6}R:   $color${diskio_read}   ${alignr}${color5}W:   $color${diskio_write}$font
 SDA: ${color3}${diskiograph /dev/sda 16,440 FF7F00 FF7F00}${color}
@@ -145,3 +139,10 @@ ${color7}${fs_bar 6 /home} }$color
 ${color7}${fs_bar 6 /opt}$color
 /opt/hdd ${fs_used /opt/hdd} of ${fs_size /opt/hdd} ${alignr}${fs_free /opt/hdd} (${fs_free_perc /opt/hdd}%)
 ${color7}${fs_bar 6 /opt}$color
+
+${font :bold}${color1}Temperature$font$color
+${color1}${hr 3}$color
+CPU: ${color9}${hwmon temp 01}°С$color
+MB:  ${color9}${texeci 6 sensors | awk '{ if(NR == 3) {print $2} }'}${color}
+SDA: ${color9}${execi 60 hddtemp /dev/sda  | awk '{print $3 " " $4}'}$color 
+
