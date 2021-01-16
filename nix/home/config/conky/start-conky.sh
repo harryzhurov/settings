@@ -2,7 +2,7 @@
 
 killall conky
 
-conky -c ~/.config/conky/conkyrc
-conky -c ~/.config/conky/conkyrc1
-conky -c ~/.config/conky/conkyrc2
+conky -c ~/.config/conky/general
+conky -c ~/.config/conky/network
+conky -c ~/.config/conky/kern-log
 #conky -c ~/.config/conky/conkyrc3
