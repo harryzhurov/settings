@@ -77,4 +77,4 @@ color9 FFAA96   #
 TEXT
 ${font :bold}${color1}System Log$font$color
 ${color1}${hr 3}$color
-${color2}${texeci 2 cat /var/log/syslog | tail }'}${color}
+${color2}${texeci 2 cat /var/log/syslog | tail -n 32 }'}${color}
