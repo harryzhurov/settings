@@ -22,7 +22,7 @@ bindkey '\e[5~' up-line-or-history              # page-up
 bindkey '\e[6~' down-line-or-history            # page-down
 
 # Search path for the cd command
-cdpath=(.. ~ ~/slon/ ~/incoming ~/pro/ ~/pro/racurs/ ~/cad ~/etc/settings/)
+cdpath=(.. ~ /opt/slon/ /opt/incoming /opt/pro/ /opt/cad ~/etc/settings/)
 
 # Use hard limits, except for a smaller stack and no core dumps
 unlimit
@@ -64,14 +64,14 @@ alias -g L='|less -M'
 
 function background() { "$@" & }
 
-alias -s {avi,mpeg,mpg,mov,m2v}='~/bin/background parole &>/dev/null'
-alias -s {odt,doc,sxw,rtf,ods}='~/bin/background libreoffice'
-alias -s pdf='~/bin/background qpdfview --unique'
+alias -s {avi,mpeg,mpg,mov,m2v}='/opt/bin/background vlc &>/dev/null'
+alias -s {odt,doc,sxw,rtf,ods}='/opt/bin/background libreoffice'
+alias -s pdf='/opt/bin/background qpdfview --unique'
 autoload -U pick-web-browser
-alias -s {html,htm}='~/bin/background vivaldi-beta >/dev/null'
-alias -s vpw='~/bin/background vs.sh'
-alias -s sch='~/bin/background $KICAD/bin/eeschema'
-alias -s kicad_pcb='~/bin/background $KICAD/bin/pcbnew'
+alias -s {html,htm}='/opt/bin/background vivaldi-beta >/dev/null'
+alias -s vpw='/opt/bin/background vs.sh'
+alias -s sch='/opt/bin/background $KICAD/bin/eeschema'
+alias -s kicad_pcb='/opt/bin/background $KICAD/bin/pcbnew'
 
 #manpath=($X11HOME/man /usr/man /usr/lang/man /usr/local/man)
 #export MANPATH
