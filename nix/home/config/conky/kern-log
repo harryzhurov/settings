@@ -24,7 +24,7 @@ xftfont Terminus (TTF):style=Bold:size=14
 update_interval 1
 
 # Minimum size of text area
-minimum_size 1560 1400
+minimum_size 1560 700
 maximum_width 1560
 
 # Draw shades?
@@ -76,4 +76,4 @@ color9 FFAA96   #
 TEXT
 ${font :bold}${color1}Kernel Log$font$color
 ${color1}${hr 3}$color
-${color2}${texeci 2 cat /var/log/syslog | tail | cut --fields=1-3,7- --delimiter=" "}${color}
+${color2}${texeci 2 cat /var/log/kern.log | tail | cut --fields=1-3,7- --delimiter=" "}${color}

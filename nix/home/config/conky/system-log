@@ -23,8 +23,9 @@ xftfont Terminus (TTF):style=Bold:size=14
 update_interval 1
 
 # Minimum size of text area
-minimum_size 350 200
-maximum_width 700
+minimum_size 1560 700
+maximum_width 1560
+
 
 # Draw shades?
 draw_shades no
@@ -53,8 +54,8 @@ alignment top_left
 #alignment bottom_right
 
 # Gap between borders of screen and text
-gap_x 1700
-gap_y 740
+gap_x 520
+gap_y 720
 
 
 # Colors w/b
