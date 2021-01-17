@@ -148,7 +148,8 @@ ${color7}${fs_bar 6 /opt}$color
 
 ${font :bold}${color1}Temperature$font$color
 ${color1}${hr 3}$color
-CPU: ${color9}${hwmon temp 01}°С$color
-MB:  ${color9}${texeci 6 sensors | awk '{ if(NR == 3) {print $2} }'}${color}
-SDA: ${color9}${execi 60 hddtemp /dev/sda  | awk '{print $3 " " $4}'}$color 
+#CPU: ${color9}${hwmon temp 01}°С$color
+CPU: ${color9}${texeci 1 sensors | grep Tdie | awk '{ {print $2} }'}${color}
+MB:  
+SDA: ${color9}${execi 10 hddtemp /dev/sda  | awk '{print $3 " " $4}'}$color 
 
