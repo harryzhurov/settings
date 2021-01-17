@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sleep 5
+
 killall conky
 
 conky -c ~/.config/conky/general
