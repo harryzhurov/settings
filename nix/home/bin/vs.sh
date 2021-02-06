@@ -1,3 +1,3 @@
 #!/bin/sh
 
-$CAD/slick/24/bin/vs +new -sc $CAD/slick/profile $@
+background $CAD/slick/25/bin/vs +newi -sc $CAD/slick/profile $@
