@@ -119,7 +119,7 @@ RAM  $memperc%${goto 100} ${color7}${membar 6}$color
 ${alignr}$swap of $swapmax ($swapperc%)
 Swap  $swapperc%${goto 100} ${color7}${swapbar 6}$color
 
-${color4}NAME              PID    CPU%    MEM%    MEM$color
+${color4}NAME              PID     CPU%     MEM%    MEM$color
 ${top_mem name 1} ${top_mem pid 1}  ${top_mem cpu 1}   ${top_mem mem 1}    ${top_mem mem_res 1}
 ${top_mem name 2} ${top_mem pid 2}  ${top_mem cpu 2}   ${top_mem mem 2}    ${top_mem mem_res 2}
 ${top_mem name 3} ${top_mem pid 3}  ${top_mem cpu 3}   ${top_mem mem 3}    ${top_mem mem_res 3}
@@ -149,7 +149,6 @@ ${color7}${fs_bar 6 /opt}$color
 ${font :bold}${color1}Temperature$font$color
 ${color1}${hr 3}$color
 #CPU: ${color9}${hwmon temp 01}°С$color
-CPU: ${color9}${texeci 1 sensors | grep Tdie | awk '{ {print $2} }'}${color}
-MB:  
-SDA: ${color9}${execi 10 hddtemp /dev/sda  | awk '{print $3 " " $4}'}$color 
+CPU:  ${color9}${texeci 1 sensors | grep Tdie | awk '{ {print $2} }'}${color}    NVMe: ${color9}${execi 10 sensors | grep Composite | awk '{print $2}'}$color
+MB:              SDA: ${color9}${execi 10 hddtemp /dev/sda  | awk '{print " +" $4}'}$color 
 
