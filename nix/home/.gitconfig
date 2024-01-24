@@ -1,6 +1,6 @@
 [user]
 	name = hz
-	email = dxp@ngs.ru
+	email = harry.zhurov@gmail.com
 	useConfigOnly = true
 
 [core]
@@ -35,3 +35,9 @@
 
 [diff]
 	external = /opt/bin/git-ext-diff
+[cola]
+	spellcheck = true
+	tabwidth = 4
+	textwidth = 80
+	fontdiff = Terminus Re33,14,-1,5,50,0,0,0,0,0
+	theme = flat-dark-grey
