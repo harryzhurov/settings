@@ -1,0 +1,32 @@
+{
+	"theme": "Default.sublime-theme",
+	"font_face": "DejaVu Sans Mono",
+	"font_size": 12,
+	"translate_tabs_to_spaces": true,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"bold_folder_labels": true,
+	"highlight_line": false,
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"margin": 0,
+	"word_wrap": "auto",
+	"wrap_width": 100,
+	"wrap_width_style": "min", //"constant",
+	"rulers": [100],
+	//"draw_white_space": "all",
+
+	"dictionary": "Dictionaries/ru_RU.dic",
+	"added_words":
+	[
+		"флудящие",
+		"контекстов",
+	],
+}

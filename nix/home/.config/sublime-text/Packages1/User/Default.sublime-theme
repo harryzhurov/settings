@@ -1,0 +1,15 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+    "variables":
+    {
+    },
+    "rules":
+    [
+        {
+            "class": "tab_label",
+            "font.size": 16, 
+            "font.face": "Ubuntu"
+        },
+        
+    ]
+}

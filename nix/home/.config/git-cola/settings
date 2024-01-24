@@ -1,0 +1,100 @@
+{
+    "bookmarks": [],
+    "gui_state": {
+        "startupdialog": {
+            "geometry": "AdnQywADAAAAAAoAAAABUAAAFAEAAAQ4AAAKAQAAAWgAABQAAAAENwAAAAEAAAAACgAAAAoBAAABaAAAFAAAAAQ3",
+            "width": 2560,
+            "height": 720,
+            "x": 2560,
+            "y": 336
+        },
+        "mainview": {
+            "geometry": "AdnQywADAAAAAACBAAAAAAAACKUAAAWfAAAAggAAABgAAAikAAAFngAAAAAAAAAACgAAAACCAAAAGAAACKQAAAWe",
+            "width": 2083,
+            "height": 1415,
+            "x": 129,
+            "y": 0,
+            "lock_layout": true,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAIAAAgjAAAFbvwBAAAAA/wAAAAAAAAB0AAAANsA/////AIAAAAD+wAAAAwAUwB0AGEAdAB1AHMBAAAAGQAAAtYAAABGAP////sAAAAQAEIAcgBhAG4AYwBoAGUAcwEAAALyAAABZgAAAEYA////+wAAABQAUwB1AGIAbQBvAGQAdQBsAGUAcwEAAARbAAABLAAAAEYA////+wAAAAgARABpAGYAZgEAAAHTAAADrAAAAGwA/////AAABYIAAAKhAAAAqwD////8AgAAAAL8AAAAGQAABFoAAABGAP////oAAAAAAQAAAAP7AAAADgBDAG8AbgBzAG8AbABlAQAAAAD/////AAAAeQD////7AAAAEgBGAGEAdgBvAHIAaQB0AGUAcwAAAAAA/////wAAAMIA////+wAAAAwAUgBlAGMAZQBuAHQAAAAAAP////8AAACbAP////sAAAAMAEMAbwBtAG0AaQB0AQAABHYAAAERAAAARgD///8AAAADAAAHgAAAAb38AQAAAAH7AAAADgBBAGMAdABpAG8AbgBzAAAAAAAAAAeAAAAAdQD///8AAAgjAAAAAAAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "show_status_filter": false,
+            "toolbars": [],
+            "ref_sort": 0,
+            "show_diff_line_numbers": true,
+            "image_diff_mode": 0,
+            "image_zoom_mode": 0,
+            "word_wrap": true
+        },
+        "finder": {
+            "geometry": "AdnQywADAAAAAApkAAAAAAAAEeUAAAWfAAAKZQAAABgAABHkAAAFngAAAAEAAAAACgAAAAplAAAAGAAAEeQAAAWe",
+            "width": 1920,
+            "height": 1415,
+            "x": 2660,
+            "y": 0
+        },
+        "gitdag": {
+            "geometry": "AdnQywADAAAAAAoAAAAAAAAAE/8AAAWfAAAAAAAAAAAAAAH/AAACCAAAAAECAAAACgAAAAoAAAAAGAAAE/8AAAWf",
+            "width": 2560,
+            "height": 1416,
+            "x": 2560,
+            "y": 0,
+            "lock_layout": false,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAT/AAAFcfwCAAAAAvsAAAAGAEwAbwBnAQAAABcAAAJvAAAAZAD////7AAAACABEAGkAZgBmAQAAAokAAAL/AAAAXAD///8AAAABAAAE/gAABXH8AgAAAAL7AAAACgBHAHIAYQBwAGgBAAAAFwAABLwAAABcAP////sAAAAKAEYAaQBsAGUAcwEAAATWAAAAsgAAAFwA////AAAAAAAAAfMAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
+            "count": 1000,
+            "log": {
+                "column_widths": [
+                    100,
+                    100,
+                    1063
+                ]
+            }
+        },
+        "browser": {
+            "geometry": "AdnQywADAAAAAA2XAAAB8QAAEGgAAAOtAAANmAAAAgkAABBnAAADrAAAAAEAAAAACgAAAA2YAAACCQAAEGcAAAOs",
+            "width": 720,
+            "height": 420,
+            "x": 3479,
+            "y": 497
+        },
+        "messagebox": {
+            "geometry": "AdnQywADAAAAAAb7AAAAAAAACcwAAANXAAAG/AAAABgAAAnLAAADVgAAAAEAAAAACgAAAAb8AAAAGAAACcsAAANW",
+            "width": 720,
+            "height": 831,
+            "x": 1787,
+            "y": 0
+        },
+        "preferencesview": {
+            "geometry": "AdnQywADAAAAAA1eAAABowAAD7UAAAPiAAANXgAAAaMAAA+1AAAD4gAAAAAAAAAACgAAAA1eAAABowAAD7UAAAPi",
+            "width": 600,
+            "height": 576,
+            "x": 3422,
+            "y": 419
+        }
+    },
+    "recent": [
+        {
+            "name": "build-system-examples",
+            "path": "/opt/slon/xilinx/npf/build-system-examples"
+        },
+        {
+            "name": "site_scons",
+            "path": "/opt/slon/xilinx/npf/build-system-examples/site_scons"
+        },
+        {
+            "name": "n-17",
+            "path": "/opt/slon/n-17"
+        },
+        {
+            "name": "katun",
+            "path": "/opt/pro/katun"
+        },
+        {
+            "name": "katun2",
+            "path": "/opt/pro/katun2"
+        },
+        {
+            "name": "ngfw",
+            "path": "/opt/pro/fw/ngfw"
+        }
+    ],
+    "copy_formats": []
+}

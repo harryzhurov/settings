@@ -1,0 +1,251 @@
+alsa.buffer 16384
+alsa.freeonstop 0
+alsa.period 2048
+alsa.resample 1
+ape.write_apev2 1
+artwork.cache.period 48
+artwork.cache_reset_time 1457164536
+artwork.enable_albumartorg 1
+artwork.enable_embedded 1
+artwork.enable_lastfm 1
+artwork.enable_localfolder 1
+artwork.enable_musicbrainz 1
+artwork.enable_wos 0
+artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
+artwork.missing_artwork 1
+artwork.nocover_path 
+artwork.scale_towards_longer 1
+artwork.scaled.cache_reset_time 1457164536
+cli_add_playlist_name Default
+cli_add_to_specific_playlist 1
+close_send_to_tray 1
+deadbeef_version 0.7.0
+filechooser.lastdir file:///home/hz
+gtkui.columns.playlist [{"title":"Обложка альбома","id":"8","format":"","size":"139","align":"0","color_override":"0","color":"#ff3c3c3c"},{"title":"♫","id":"1","format":"%playstatus%","size":"29","align":"0","color_override":"0","color":"#ff000000"},{"title":"Исполнитель","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","size":"178","align":"0","color_override":"0","color":"#ff3c3c3c"},{"title":"Альбом","id":"-1","format":"%directoryname%","size":"238","align":"0","color_override":"0","color":"#ff313739"},{"title":"№","id":"-1","format":"%track number%","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Название","id":"-1","format":"%title%","size":"407","align":"0","color_override":"0","color":"#ff000000"},{"title":"Продолжительность","id":"-1","format":"%length%","size":"95","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.columns.search [{"title":"Исполнитель / Альбом","id":"-1","format":"%artist% - %album%","size":"220","align":"0","color_override":"0","color":"#ff000000"},{"title":"№","id":"-1","format":"%track number%","size":"64","align":"1","color_override":"0","color":"#ff000000"},{"title":"Название","id":"-1","format":"%title%","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Продолжительность","id":"-1","format":"%length%","size":"50","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.embolden_current_track 1
+gtkui.eq.visible 1
+gtkui.layout.0.6.2 vsplitter pos=0 locked=0 {placeholder {} vsplitter pos=48 locked=0 {hsplitter pos=1087 locked=0 {hsplitter pos=832 locked=0 {hsplitter pos=190 locked=0 {customizable_toolbar layout="prev|0|media-skip-backward,stop|0|media-playback-stop,play|0|media-playback-start,toggle_pause|0|media-playback-pause,next|0|media-skip-forward,track_properties|3|input-tablet" {} waveform_seekbar {} } scope {} } hsplitter pos=142 locked=0 {placeholder {} volumebar {} } } vsplitter pos=14 locked=0 {seekbar {} hsplitter pos=303 locked=0 {vsplitter pos=154 locked=0 {musical_spectrum {} infobar {} } tabbed_playlist hideheaders=0 {} } } } } 
+gtkui.mmb_delete_playlist 1
+gtkui.name_playlist_from_folder 1
+gtkui.override_bar_colors 0
+gtkui.playlist.group_by_tf %album%
+gtkui.statusbar.visible 1
+gtkui.tabscroll 395
+gtkui.titlebar_playing_tf %artist% - %title% - DeaDBeeF-%_deadbeef_version%
+gtkui.titlebar_stopped_tf DeaDBeeF-%_deadbeef_version%
+gui_plugin GTK2
+hotkey.key01 "Ctrl f" 0 0 find
+hotkey.key02 "Ctrl o" 0 0 open_files
+hotkey.key03 "Ctrl q" 0 0 quit
+hotkey.key04 "Ctrl n" 0 0 new_playlist
+hotkey.key05 "Ctrl a" 0 0 select_all
+hotkey.key06 "Escape" 0 0 deselect_all
+hotkey.key07 "Ctrl m" 0 0 toggle_stop_after_current
+hotkey.key08 "Ctrl j" 0 0 jump_to_current_track
+hotkey.key09 "F1" 0 0 help
+hotkey.key10 "Delete" 1 0 remove_from_playlist
+hotkey.key11 "Ctrl w" 0 0 remove_current_playlist
+hotkey.key12 "Return" 0 0 play
+hotkey.key13 "space" 0 0 toggle_pause
+hotkey.key14 "Alt 1" 0 0 playlist1
+hotkey.key15 "Alt 2" 0 0 playlist2
+hotkey.key16 "Alt 3" 0 0 playlist3
+hotkey.key17 "Alt 4" 0 0 playlist4
+hotkey.key18 "Alt 5" 0 0 playlist5
+hotkey.key19 "Alt 6" 0 0 playlist6
+hotkey.key20 "Alt 7" 0 0 playlist7
+hotkey.key21 "Alt 8" 0 0 playlist8
+hotkey.key22 "Alt 9" 0 0 playlist9
+hotkey.key23 "Alt 0" 0 0 playlist10
+hotkey.key24 "z" 0 0 prev
+hotkey.key25 "x" 0 0 play
+hotkey.key26 "v" 0 0 stop
+hotkey.key27 "b" 0 0 next
+hotkey.key28 "n" 0 0 playback_random
+hotkey.key29 "Ctrl k" 0 0 toggle_stop_after_album
+hotkey.key30 "Super s" 0 1 play_pause
+hotkey.key31 "Super w" 0 1 toggle_player_window
+hotkey.key32 "Ctrl p" 0 0 preferences
+hotkey.key33 "Insert" 0 0 add_folders
+hotkey.key34 "F4" 1 0 track_properties
+hotkey.key35 "Right" 0 0 seek_5s_fwd
+hotkey.key36 "Left" 0 0 seek_5s_back
+hotkeys_created 1
+ignore_archives 1
+infobar.bio.cache.period 24.000000
+infobar.bio.enabled 1
+infobar.bio.locale en
+infobar.lyrics.alignment 0
+infobar.lyrics.cache.period 1.000000
+infobar.lyrics.enabled 1
+infobar.lyrics.lyricsmania 1
+infobar.lyrics.lyricstime 1
+infobar.lyrics.lyricswikia 1
+infobar.lyrics.megalyrics 1
+infobar.lyrics.script 0
+infobar.lyrics.script.path 
+infobar.similar.enabled 1
+infobar.similar.max.artists 10.000000
+junk.enable_cp1251_detection 1
+mainwin.geometry.h 1415
+mainwin.geometry.maximized 0
+mainwin.geometry.w 1480
+mainwin.geometry.x 2560
+mainwin.geometry.y 0
+mp3.id3v1_encoding iso8859-1
+mp3.id3v2_version 3
+mp3.write_id3v1 1
+mp3.write_id3v2 1
+musical_spectrum.alignment 0
+musical_spectrum.bar_delay 0
+musical_spectrum.bar_falloff -1
+musical_spectrum.bar_w 0
+musical_spectrum.color.background 8738 8738 8738
+musical_spectrum.color.gradient_00 65535 0 0
+musical_spectrum.color.gradient_01 65535 32896 0
+musical_spectrum.color.gradient_02 65535 65535 0
+musical_spectrum.color.gradient_03 32896 65535 30840
+musical_spectrum.color.gradient_04 0 38036 41120
+musical_spectrum.color.gradient_05 0 8224 25700
+musical_spectrum.color.hgrid 26214 26214 26214
+musical_spectrum.color.octave_grid 26214 26214 26214
+musical_spectrum.color.vgrid 0 0 0
+musical_spectrum.db_range 70
+musical_spectrum.display_octaves_on_hover 0
+musical_spectrum.draw_style 0
+musical_spectrum.enable_bar_mode 0
+musical_spectrum.enable_hgrid 1
+musical_spectrum.enable_octave_grid 0
+musical_spectrum.enable_vgrid 1
+musical_spectrum.fft_size 8192
+musical_spectrum.fill_spectrum 1
+musical_spectrum.gaps 1
+musical_spectrum.gradient_orientation 0
+musical_spectrum.num_bars 132
+musical_spectrum.num_colors 6
+musical_spectrum.peak_delay 500
+musical_spectrum.peak_falloff 90
+musical_spectrum.refresh_interval 25
+musical_spectrum.window 0
+network.http_user_agent deadbeef
+network.proxy.port 8080
+network.proxy.type HTTP
+notify.albumart 1
+notify.albumart_size 64
+notify.enable 1
+notify.format_content_tf %artist% - %album%
+notify.format_title_tf %title%
+output_plugin ALSA output plugin
+playback.loop 1
+playback.order 0
+playback.volume 0.0000000
+playlist.current 5
+playlist.cursor.0 87
+playlist.cursor.1 6
+playlist.cursor.10 -1
+playlist.cursor.11 4
+playlist.cursor.12 58
+playlist.cursor.13 113
+playlist.cursor.14 -1
+playlist.cursor.15 0
+playlist.cursor.2 1
+playlist.cursor.3 5
+playlist.cursor.4 -1
+playlist.cursor.5 0
+playlist.cursor.6 0
+playlist.cursor.7 18
+playlist.cursor.8 50
+playlist.cursor.9 23
+playlist.scroll.0 1920
+playlist.scroll.1 0
+playlist.scroll.10 0
+playlist.scroll.11 0
+playlist.scroll.12 1120
+playlist.scroll.13 2626
+playlist.scroll.14 0
+playlist.scroll.15 0
+playlist.scroll.2 0
+playlist.scroll.3 0
+playlist.scroll.4 0
+playlist.scroll.5 0
+playlist.scroll.6 0
+playlist.scroll.7 0
+playlist.scroll.8 831
+playlist.scroll.9 0
+playlist.scroll.cursorfollowplayback 1
+playlist.tab.00000 Default
+playlist.tab.00001 Leprous - Aphelion (2021)
+playlist.tab.00002 Division by Zero
+playlist.tab.00003 Ephrat_No one's words_2008
+playlist.tab.00004 Gazpacho
+playlist.tab.00005 Marillion - Discography (Part 1)
+playlist.tab.00006 OSI
+playlist.tab.00007 Enigma
+playlist.tab.00008 Soen - Discography
+playlist.tab.00009 Горшенев-Есенин - Жизнь поэта (2CD) Lossless
+playlist.tab.00010 2020 - Звёздный мусор
+prefwin.geometry.h 1311
+prefwin.geometry.w 1525
+prefwin.geometry.x 2889
+prefwin.geometry.y 37
+replaygain_mode 0
+replaygain_scale 1
+resume.paused 0
+resume.playlist 4
+resume.position -1.000000
+resume.track -1
+resume_last_session 1
+searchwin.geometry.h 377
+searchwin.geometry.w 599
+searchwin.geometry.x 623
+searchwin.geometry.y 293
+spectrogram.color.gradient_00 65535 0 0
+spectrogram.color.gradient_01 65535 32896 0
+spectrogram.color.gradient_02 65535 65535 0
+spectrogram.color.gradient_03 32896 65535 30840
+spectrogram.color.gradient_04 0 38036 41120
+spectrogram.color.gradient_05 0 8224 25700
+spectrogram.color.gradient_06 0 0 0
+spectrogram.db_range 70
+spectrogram.log_scale 1
+spectrogram.num_colors 7
+spectrogram.refresh_interval 25
+streamer.8_to_16 1
+trkproperties.geometry.h 895
+trkproperties.geometry.w 1185
+trkproperties.geometry.x 0
+trkproperties.geometry.y 0
+waveform.bg_alpha 65535
+waveform.bg_color_b 50000
+waveform.bg_color_g 50000
+waveform.bg_color_r 50000
+waveform.border_width 1
+waveform.cache_enabled 1
+waveform.cursor_width 2
+waveform.display_rms 1
+waveform.display_ruler 0
+waveform.fg_alpha 65535
+waveform.fg_color_b 20000
+waveform.fg_color_g 20000
+waveform.fg_color_r 20000
+waveform.fg_rms_alpha 65535
+waveform.fg_rms_color_b 5000
+waveform.fg_rms_color_g 5000
+waveform.fg_rms_color_r 5000
+waveform.fill_waveform 1
+waveform.font_size 18
+waveform.log_enabled 0
+waveform.max_file_length 180
+waveform.mix_to_mono 0
+waveform.num_samples 2048
+waveform.pb_alpha 20000
+waveform.pb_color_b 0
+waveform.pb_color_g 65535
+waveform.pb_color_r 0
+waveform.refresh_interval 32
+waveform.render_method 2
+waveform.scroll_enabled 1
+waveform.shade_waveform 0
+waveform.soundcloud_style 0
+wv.write_apev2 1
