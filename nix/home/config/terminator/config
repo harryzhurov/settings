@@ -1,31 +1,46 @@
 [global_config]
+  handle_size = 1
+  geometry_hinting = True
   window_state = maximise
+  broadcast_default = off
+  scroll_tabbar = True
+  homogeneous_tabbar = False
+  title_transmit_fg_color = "#f9f06b"
   title_transmit_bg_color = "#00038e"
+  title_receive_bg_color = "#e66100"
+  title_inactive_bg_color = "#77767b"
+  inactive_color_offset = 0.9597701149425287
   enabled_plugins = InactivityWatch, TerminalShot, APTURLHandler, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
+  title_use_system_font = False
+  title_font = Terminus (TTF) Medium 14
 [keybindings]
   cycle_prev = None
   go_next = None
   go_prev = None
-  go_left = None
-  go_right = None
+  go_left = <Super>Left
+  go_right = <Super>Right
   split_horiz = <Alt><Super>h
   split_vert = <Alt><Super>v
   close_term = <Primary>q
+  paste = <Shift>Insert
   next_tab = <Alt>Right
   prev_tab = <Alt>Left
   help = <Super>F1
 [profiles]
   [[default]]
-    allow_bold = False
     background_darkness = 1.0
     cursor_shape = ibeam
-    cursor_color = "#aaaaaa"
+    cursor_color = "#ffffff"
+    cursor_color_fg = False
     font = Terminus (TTF) Bold 14
     scrollbar_position = hidden
     scrollback_infinite = True
     palette = "#2e3436:#9d0303:#4e9a06:#eacb40:#3465a4:#ac3abe:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fbff00:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    login_shell = True
     custom_command = env TERM-xterm-256color
     use_system_font = False
+    bold_is_bright = True
     copy_on_selection = True
 [layouts]
   [[default]]
