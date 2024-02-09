@@ -22,7 +22,7 @@ alias lsd='ls -ld *(-/DN)'
 # List only file beginning with "."
 alias lsa='ls -ld .*'
 
-alias hsrv='ssh root@5.128.60.74'
+alias hsrv='ssh root@192.168.0.1'
 alias wsrv='ssh root@192.168.0.50' 
 alias wsrv-git='ssh git@192.168.0.50'
 
@@ -95,6 +95,9 @@ alias vivado="$CAD/xilinx/Vivado/2018.2/bin/vivado &"
 alias xsdk="$CAD/xilinx/Vivado/2018.2/bin/sdx &"
 
 vivado-tcl() {
-    $CAD//xilinx/Vivado/2018.2/bin/vivado -mode tcl
+    $CAD/xilinx/Vivado/2018.2/bin/vivado -mode tcl
 }    
 
+vivado-batch() {
+    $CAD/xilinx/Vivado/2018.2/bin/vivado -mode batch -source $1
+}    
